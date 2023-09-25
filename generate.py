@@ -1,14 +1,15 @@
 import mysql.connector
 import dotenv
+import os
 
 dotenv.load_dotenv()
 
 # Database connection configuration
 config = {
-    'user': dotenv.get_key('dbuser'),
-    'password': dotenv.get_key('dbpassword'),
-    'host': dotenv.get_key('dbhost'),
-    'database': dotenv.get_key('dbname'),
+    'user': os.getenv('dbuser'),
+    'password': os.getenv('dbpassword'),
+    'host': os.getenv('dbhost'),
+    'database': os.getenv('dbname'),
     'raise_on_warnings': True
 }
 
@@ -60,7 +61,7 @@ cursor.close()
 conn.close()
 
 # Write Mermaid code to a file
-with open(f'database_diagram_{config["database"]}.mmd', 'w') as f:
+with open(f'generated/database_diagram_{config["database"]}.mmd', 'w') as f:
     f.write(mermaid_code)
 
 print("Mermaid file has been generated successfully!")
