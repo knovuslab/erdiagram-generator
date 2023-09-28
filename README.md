@@ -52,7 +52,7 @@ Hello Developers! We're excited to share a tool that has become an essential par
     - Go to `Arrange -> Insert -> Advanced -> Mermaid`.
     - Import the generated `.mmd` file.
 
-![ER Diagram Generator Example](how.png)
+![ER Diagram Generator Example](https://github.com/knovuslab/erdiagram-generator/raw/main/how.PNG)
 
 
   
